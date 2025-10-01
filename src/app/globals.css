@@ -24,3 +24,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Set a default dark color for form inputs */
+input, select, textarea {
+  color: #171717;
+}
+

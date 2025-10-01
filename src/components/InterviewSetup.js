@@ -67,8 +67,8 @@ export default function InterviewSetup() {
       console.log('🔍 result.success:', result.success)
       console.log('🔍 Direct data - name:', result.name, 'email:', result.email, 'phone:', result.phone)
       
-      if (result.success) {
-        console.log('✅ SUCCESS BRANCH - Parsing successful (using defaults for missing data)')
+      if (result.success && (result.name || result.email)) {
+        console.log('✅ SUCCESS BRANCH - Parsing successful')
         console.log('Raw API Response:', result)
         console.log('Direct extracted data:', { name: result.name, email: result.email, phone: result.phone })
         console.log('Current formData before update:', formData)
@@ -426,11 +426,6 @@ export default function InterviewSetup() {
         {/* Step 3: Interview Configuration */}
         {step === 3 && (
           <div className="space-y-4">
-            {/* Debug info */}
-            <div className="bg-gray-100 border border-gray-300 rounded-lg p-4 text-xs">
-              <h4 className="font-bold text-gray-900">DEBUG - Current Form Data:</h4>
-              <pre className="text-gray-800">{JSON.stringify(formData, null, 2)}</pre>
-            </div>
             
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -442,7 +437,7 @@ export default function InterviewSetup() {
                 key={`role-${formData.role}`}
                 value={formData.role}
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder-gray-500"
                 placeholder="e.g., Full Stack Developer"
               />
             </div>
@@ -474,7 +469,7 @@ export default function InterviewSetup() {
                 key={`skills-${formData.skills}`}
                 value={formData.skills}
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder-gray-500"
                 placeholder="e.g., React, Node.js, JavaScript"
               />
             </div>
