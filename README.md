@@ -24,7 +24,7 @@ This project is a comprehensive, AI-powered platform designed to automate and en
   - **Runtime**: Python 3.9 Serverless Functions on Vercel
   - **API Layer**: Standard Python `http.server` (no frameworks)
 - **AI**:
-  - **Provider**: Google Gemini (`gemini-pro`)
+  - **Provider**: Google Gemini (`gemini-2.5-flash-lite-preview-09-2025`)
   - **SDK**: `google-generativeai` for Python
 - **Deployment**:
   - **Platform**: Vercel
