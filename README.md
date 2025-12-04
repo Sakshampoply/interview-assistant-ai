@@ -1,5 +1,7 @@
 # AI-Powered Interview Assistant
 
+Deployement Link:- https://ai-interview-assist-one.vercel.app/
+
 This project is a comprehensive, AI-powered platform designed to automate and enhance the technical interview process. It leverages Google's Gemini AI to parse resumes, dynamically generate interview questions, and provide in-depth evaluations of candidate answers. The entire application is built as a modern, serverless web app.
 
 ## 🚀 Core Features
